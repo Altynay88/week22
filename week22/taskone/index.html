@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Расчет стоимости автомобиля</title>
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext"
+		rel="stylesheet" />
+</head>
+
+<body>
+	<main class="calc-wrapper">
+		<div class="container">
+			<form id="form">
+				<div class="heading">
+					<h2 class="heading-title">Калькулятор стоимости автомобиля</h2>
+				</div>
+				<!-- Возраст автомобиля -->
+				<div class="calc-section">
+					<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+						<span class="title__inline">Возраст автомобиля:</span>
+						<input type="number" min="0" max="20" value="0" id="year-input"
+							class="title__inline input-short" />
+						<span class="title__inline">лет</span>
+					</label>
+					<input type="range" id="year-range" class="range-input" min="0" max="20" value="0" step="1" />
+				</div>
+
+				<!--Марка и Модель автомобиля -->
+				<div class="calc-section">
+					<label class="checkbox-wrapper title-bold section-title"> Марка автомобиля </label>
+					<div class="brand-wrapper">
+						<label class="brand-label">
+							<input class="brand-radio-real" type="radio" name="brand" value="0.8" />
+							<span class="brand-radio-fake">Toyota</span>
+						</label>
+
+						<label class="brand-label">
+							<input class="brand-radio-real" type="radio" name="brand" value="1" checked />
+							<span class="brand-radio-fake">Audi</span>
+						</label>
+
+						<label class="brand-label">
+							<input class="brand-radio-real" type="radio" name="brand" value="1" />
+							<span class="brand-radio-fake">Ford</span>
+						</label>
+
+						<label class="brand-label">
+							<input class="brand-radio-real" type="radio" name="brand" value="1.05" />
+							<span class="brand-radio-fake">Nissan</span>
+						</label>
+
+						<label class="brand-label">
+							<input class="brand-radio-real" type="radio" name="brand" value="2" />
+							<span class="brand-radio-fake">BMW</span>
+						</label>
+
+						<label class="brand-label">
+							<input class="brand-radio-real" type="radio" name="brand" value="1" />
+							<span class="brand-radio-fake">Honda</span>
+						</label>
+					</div>
+					<div class="select">
+						<label for="cars" class="title-bold section-title ">Модель автомобиля:</label>
+						<select>
+							<option>Camry</option>
+							<option>Corolla</option>
+							<option>Maxima</option>
+							<option>Cefiro</option>
+							<option>Land Cruiser</option>
+						</select>
+						<div class="select_arrow">
+						</div>
+					</div>
+
+					<!-- Двигатель -->
+					<div class="calc-section">
+						<h4 class="checkbox-wrapper title-bold section-title">Двигатель</h4>
+						<label class="radio-wrapper" data-name="mobile">
+							<input type="radio" class="radio" name="mobile" value="1.5" />
+							<div class="title-lite">Бензин</div>
+						</label>
+						<label class="radio-wrapper" data-name="mobile">
+							<input type="radio" class="radio" name="mobile" value="1.3" checked />
+							<div class="title-lite">
+								Газ
+							</div>
+						</label>
+						<label class="radio-wrapper" data-name="mobile">
+							<input type="radio" class="radio" name="mobile" value="2" />
+							<div class="title-lite">
+								Дизель
+							</div>
+						</label>
+					</div>
+
+
+					<!-- Привод -->
+					<div class="calc-section">
+						<label class="checkbox-wrapper title-bold section-title"> Привод </label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="gear" value="1.5" checked />
+							<div class="title-lite">Полный привод</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="gear" value="1.8" />
+							<div class="title-lite">
+								Задний привод
+							</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="gear" value="2" />
+							<div class="title-lite">								Передний привод
+							</div>
+						</label>
+					</div>
+
+					<!-- Кузов-->
+					<div class="calc-section">
+						<label class="checkbox-wrapper title-bold section-title"> Кузов </label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="autobody" value="2" />
+							<div class="title-lite">
+								Седан
+							</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="autobody" value="1.5" />
+							<div class="title-lite">
+								Кроссовер
+							</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="autobody" value="1.8" />
+							<div class="title-lite">
+								Универсал
+							</div>
+						</label>
+					</div>
+
+					<!-- Стоимость авто -->
+					<div class="calc-price">
+						<div class="calc-price-title">Стоимость автомобиля:</div>
+						<div class="calc-price-value">
+							<span id="total-price">0</span>
+							$
+						</div>
+					</div>
+
+			</form>
+		</div>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
