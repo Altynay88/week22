@@ -53,7 +53,7 @@ function calculate() {
 }
 
 try {
-    calculate();
+    calculat();
 } catch (err) {
     alert("Сервер не доступен")
 }
